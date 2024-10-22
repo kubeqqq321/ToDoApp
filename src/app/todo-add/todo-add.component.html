@@ -1,0 +1,20 @@
+<form (ngSubmit)="onSubmit()" class="example-form">
+  <app-wrapper-element>
+    <mat-card-header>
+      <mat-card-title>Add To Do</mat-card-title>
+      <!--      <mat-card-subtitle>Non-sporting group</mat-card-subtitle>-->
+    </mat-card-header>
+    <!--    <mat-divider></mat-divider> &lt;!&ndash; -> odziela elementy linią poziomą po całej długości kontenera&ndash;&gt;-->
+
+    <mat-form-field class="form-field-todo-add">
+      <mat-label>Add task</mat-label>
+      <input matInput placeholder="Ex. Do something">
+    </mat-form-field>
+
+    <mat-card-actions align="end">
+      <button mat-flat-button>Basic</button>
+    </mat-card-actions>
+  </app-wrapper-element>
+
+
+</form>

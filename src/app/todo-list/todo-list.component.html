@@ -1,0 +1,19 @@
+<form (ngSubmit)="onSubmit()" class="example-form">
+  <app-wrapper-element>
+
+    <mat-card-header>
+      <mat-card-title>To Do List</mat-card-title>
+    </mat-card-header>
+    <!--    <mat-divider></mat-divider> &lt;!&ndash; -> odziela elementy linią poziomą po całej długości kontenera&ndash;&gt;-->
+
+    <!--    tu będą wyświetlane zadania do zrobienia po tym jak zostaną wpisane w add to do -->
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let todo of tasks">
+          <mat-checkbox>{{ todo }}</mat-checkbox>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+
+  </app-wrapper-element>
+</form>
