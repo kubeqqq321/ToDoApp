@@ -5,7 +5,7 @@ import {MatInput} from '@angular/material/input';
 import {MatButton} from '@angular/material/button';
 import {MatDivider} from '@angular/material/divider';
 import {FormsModule} from '@angular/forms';
-import {WrapperElementComponent} from '../wrapper-element/wrapper-element.component';
+import {WrapperElementComponent} from '../../wrapper-element/wrapper-element.component';
 
 
 @Component({
@@ -31,10 +31,10 @@ import {WrapperElementComponent} from '../wrapper-element/wrapper-element.compon
 })
 export class TodoAddComponent {
   value = 'Clear me';
-
+  enteredTask!: string;
   protected readonly onsubmit = onsubmit;
 
   onSubmit() {
-    return true;
+    console.log(this.enteredTask);
   }
 }

@@ -8,11 +8,11 @@
 
     <mat-form-field class="form-field-todo-add">
       <mat-label>Add task</mat-label>
-      <input matInput placeholder="Ex. Do something">
+      <input [(ngModel)]="enteredTask" matInput placeholder="Ex. Do something">
     </mat-form-field>
 
     <mat-card-actions align="end">
-      <button mat-flat-button>Basic</button>
+      <button mat-flat-button type="submit">Create task</button>
     </mat-card-actions>
   </app-wrapper-element>
 

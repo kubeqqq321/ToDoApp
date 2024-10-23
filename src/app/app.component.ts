@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
-import {TodoListComponent} from './todo-list/todo-list.component';
-import {TodoAddComponent} from './todo-add/todo-add.component';
-import {TodoCompleteComponent} from './todo-complete/todo-complete.component';
+import {TodoListComponent} from './todo/todo-list/todo-list.component';
+import {TodoAddComponent} from './todo/todo-add/todo-add.component';
+import {TodoCompleteComponent} from './todo/todo-complete/todo-complete.component';
 import {MatCard, MatCardContent, MatCardHeader} from '@angular/material/card';
 import {MatFormField} from '@angular/material/form-field';
 import {MatInput} from '@angular/material/input';
