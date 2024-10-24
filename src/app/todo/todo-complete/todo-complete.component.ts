@@ -43,7 +43,4 @@ import {NgForOf} from '@angular/common';
 })
 export class TodoCompleteComponent {
 
-  onSubmit() {
-
-  }
 }

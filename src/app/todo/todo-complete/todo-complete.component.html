@@ -1,20 +1,18 @@
-<form (ngSubmit)="onSubmit()" class="example-form">
-  <app-wrapper-element>
-    <mat-card-header>
-      <mat-card-title>Completed</mat-card-title>
-      <!--      <mat-card-subtitle>Non-sporting group</mat-card-subtitle>-->
-    </mat-card-header>
-    <!--    <mat-divider></mat-divider> &lt;!&ndash; -> odziela elementy linią poziomą po całej długości kontenera&ndash;&gt;-->
+<app-wrapper-element>
+  <mat-card-header>
+    <mat-card-title>Completed</mat-card-title>
+    <!--      <mat-card-subtitle>Non-sporting group</mat-card-subtitle>-->
+  </mat-card-header>
+  <!--    <mat-divider></mat-divider> &lt;!&ndash; -> odziela elementy linią poziomą po całej długości kontenera&ndash;&gt;-->
 
-    <mat-card-content>
-      <!--      jezeli nie ma żadnych zadań do zrobienia to wyświetl komunikat "No tasks to do ikonka z uśmiechniętą buźką"-->
-      <!--      <mat-list *ngIf="tasks.length !== 0; else emptyList">-->
+  <mat-card-content>
+    <!--      jezeli nie ma żadnych zadań do zrobienia to wyświetl komunikat "No tasks to do ikonka z uśmiechniętą buźką"-->
+    <!--      <mat-list *ngIf="tasks.length !== 0; else emptyList">-->
 
 
-      <mat-label>Everything DONE</mat-label>
-      <mat-icon>sentiment_satisfied_alt</mat-icon>
+    <mat-label>Everything DONE</mat-label>
+    <mat-icon>check_circle</mat-icon>
 
-      <!--      </mat-list>-->
-    </mat-card-content>
-  </app-wrapper-element>
-</form>
+    <!--      </mat-list>-->
+  </mat-card-content>
+</app-wrapper-element>
