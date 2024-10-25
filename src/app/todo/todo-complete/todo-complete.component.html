@@ -1,18 +1,20 @@
 <app-wrapper-element>
   <mat-card-header>
-    <mat-card-title>Completed</mat-card-title>
-    <!--      <mat-card-subtitle>Non-sporting group</mat-card-subtitle>-->
+    <mat-card-title [matBadge]="tasks.length" class="demo-section" matBadgeOverlap="false">Completed</mat-card-title>
   </mat-card-header>
-  <!--    <mat-divider></mat-divider> &lt;!&ndash; -> odziela elementy linią poziomą po całej długości kontenera&ndash;&gt;-->
-
-  <mat-card-content>
-    <!--      jezeli nie ma żadnych zadań do zrobienia to wyświetl komunikat "No tasks to do ikonka z uśmiechniętą buźką"-->
-    <!--      <mat-list *ngIf="tasks.length !== 0; else emptyList">-->
 
 
-    <mat-label>Everything DONE</mat-label>
-    <mat-icon>check_circle</mat-icon>
-
-    <!--      </mat-list>-->
+  <mat-card-content *ngIf="tasks.length === 0; else moreThanZeroTemplate">
+    <mat-list-item class="display-flex-item">
+      <mat-label>Everything done</mat-label>
+      <mat-icon>check_circle</mat-icon>
+    </mat-list-item>
   </mat-card-content>
+
+  <ng-template #moreThanZeroTemplate>
+    <mat-list-item *ngFor="let task of tasks">
+      <app-todo-list-item [task]="task"/>
+    </mat-list-item>
+  </ng-template>
+
 </app-wrapper-element>

@@ -36,12 +36,12 @@ import {NgIf} from '@angular/common';
 export class TodoAddComponent {
 
   titleTask: string = '';
-  // protected readonly onsubmit = onsubmit;
+
   private todoService = inject(TodoService);
 
   onSubmit() {
     this.todoService.addTask({
-      id: new Date().getDate().toString(),
+      id: new Date().getDate(),
       title: this.titleTask,
       isCompleted: false
     });

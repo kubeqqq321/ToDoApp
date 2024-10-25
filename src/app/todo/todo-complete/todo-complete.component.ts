@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {MatButton} from "@angular/material/button";
 import {
   MatCard,
@@ -15,7 +15,11 @@ import {WrapperElementComponent} from '../../wrapper-element/wrapper-element.com
 import {MatCheckbox} from '@angular/material/checkbox';
 import {MatIcon} from '@angular/material/icon';
 import {MatListItem} from '@angular/material/list';
-import {NgForOf} from '@angular/common';
+import {NgForOf, NgIf} from '@angular/common';
+import {TodoService} from '../todo.service';
+import {TodoListItemComponent} from '../todo-list-item/todo-list-item.component';
+import {ToDoModel} from '../todo.model';
+import {MatBadge} from '@angular/material/badge';
 
 @Component({
   selector: 'app-todo-complete',
@@ -36,11 +40,24 @@ import {NgForOf} from '@angular/common';
     MatCheckbox,
     MatIcon,
     MatListItem,
-    NgForOf
+    NgForOf,
+    NgIf,
+    TodoListItemComponent,
+    MatBadge
   ],
   templateUrl: './todo-complete.component.html',
   styleUrl: './todo-complete.component.css'
 })
 export class TodoCompleteComponent {
+
+  private todoService = inject(TodoService);
+
+  get tasks() {
+    return this.todoService.allCompletedTasksTable;
+  }
+
+  onUncheck(task: ToDoModel) {
+    this.todoService.markTaskAsUncompleted(task.id);
+  }
 
 }

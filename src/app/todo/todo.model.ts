@@ -1,10 +1,6 @@
 export interface ToDoModel {
-  id: string;
+  id: number;
   title: string;
   isCompleted: boolean;
-}
-
-export interface NewToDoModel {
-  title: string;
 }
 

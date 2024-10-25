@@ -11,9 +11,8 @@ import {NgForOf, NgIf} from '@angular/common';
 import {MatIcon} from '@angular/material/icon';
 import {MatBadge} from '@angular/material/badge';
 import {MatTooltip} from '@angular/material/tooltip';
-import {ToDoModel} from '../todo.model';
 import {TodoService} from '../todo.service';
-import {TodoListItemComponent} from './todo-list-item/todo-list-item.component';
+import {TodoListItemComponent} from '../todo-list-item/todo-list-item.component';
 
 @Component({
   selector: 'app-todo-list',
@@ -48,8 +47,9 @@ export class TodoListComponent {
 
   private todoService = inject(TodoService);
 
+
   get tasks() {
-    return this.todoService.allTasks;
+    return this.todoService.allTasksTable.sort();
   }
 
 }
